@@ -10,6 +10,7 @@
     * `$` lijkt logischer dan `@`
     * al voldoende mee vertrouwd
     * meer gebruikt
+    * versie: `gulp-sass`
 * commandline git
     * al mee vertrouwd
     * meer vrijheid dan GUI
@@ -21,3 +22,6 @@
     * enige echte keuze op OS X
     * [startscript](http://stackoverflow.com/a/19676943/3185307) (en anderen) werkte niet, ik gebruik nu de GUI
     * `ln -s path/to/webscripten-2 /Applications/MAMP/htdocs/`
+* `.gitignore`
+    * `node_modules`
+    * enkele nutteloze bestanden op OS X

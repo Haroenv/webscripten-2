@@ -1,0 +1,18 @@
+{
+  "name": "cws2_labo_01_viaene_haroen",
+  "version": "0.0.1",
+  "description": "Blazers website, oefening op devtools",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.ikdoeict.be/haroen.viaene/cws2_labo_01_viaene_haroen.git"
+  },
+  "author": "Haroen Viaene <hello@haroen.me>",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
