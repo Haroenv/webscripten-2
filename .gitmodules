@@ -1,3 +1,6 @@
 [submodule "clientside/cws2_labo_01_viaene_haroen"]
 	path = clientside/cws2_labo_01_viaene_haroen
 	url = https://git.ikdoeict.be/haroen.viaene/cws2_labo_01_viaene_haroen.git
+[submodule "clientside/cws2_labo_03_viaene_haroen"]
+	path = clientside/cws2_labo_03_viaene_haroen
+	url = https://git.ikdoeict.be/haroen.viaene/cws2_labo_03_viaene_haroen.git
