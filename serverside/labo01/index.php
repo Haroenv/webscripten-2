@@ -17,12 +17,18 @@
   $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams,$config);
 
   $search = isset($_GET['search']) ? $_GET['search'] : '';
+  $switch = isset($_GET['switch']) ? $_GET['switch'] : '';
+
+
+  if ($switch !== '') {
+    $conn->executeUpdate('UPDATE concerts SET fav = (1 - fav) WHERE id = ?', array($switch));
+  }
 
   if ($search !== '') {
-    $concerts = $conn->fetchAll('SELECT * FROM concerts WHERE title LIKE ?', array('%'.$search.'%'));
+    $concerts = $conn->fetchAll('SELECT * FROM concerts WHERE title LIKE ? ORDER BY start_date', array('%'.$search.'%'));
 
   } else {
-    $concerts = $conn->fetchAll('SELECT * FROM concerts');
+    $concerts = $conn->fetchAll('SELECT * FROM concerts ORDER BY start_date');
   }
 
   $tpl = $twig->loadTemplate('main.twig');
