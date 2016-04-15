@@ -16,3 +16,11 @@ $app->get('/search/{term}/', function(Silex\Application $app, $term) {
     'search' => $app->escape($term)
   ));
 });
+// $app->get('/switch/{term}/', function(Silex\Application $app, $term) {
+//   $events = $app['db']->fetchAll('SELECT * FROM concerts WHERE title LIKE ? ORDER BY start_date', array('%'.$app->escape($term).'%'));
+//   return $app['twig']->render('main.twig', array(
+//     'name' => $name,
+//     'events' => $events,
+//     'search' => $app->escape($term)
+//   ));
+// });
