@@ -1,0 +1,12 @@
+{
+    "name": "haroenv/labo01",
+    "require": {
+        "twig/twig": "^1.24"
+    },
+    "authors": [
+        {
+            "name": "Haroen Viaene",
+            "email": "hello@haroen.me"
+        }
+    ]
+}
