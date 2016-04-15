@@ -10,7 +10,6 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
     'db.options' => array(
         'path'     => __DIR__ .  DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'app.db',
         'driver'    => 'pdo_mysql',
-        'host'      => 'localhost',
         'dbname'    => 'concerts',
         'user'      => 'root',
         'password'  => 'root',
