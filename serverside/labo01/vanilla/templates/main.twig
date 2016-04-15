@@ -48,6 +48,9 @@
                   <tr>
                     <td>{{ event.start_date|date("j M Y - G\\ui")|lower }}</td>
                     <td>{{ event.title }} ({{event.location}})<br/>
+                      <!-- <form action="index.php" method="POST" style="margin:0;"> -->
+                        <!-- <input type="submit" value="{% if event.fav == 0 %}voeg toe aan favorieten{% else %}verwijder van favorieten{% endif %}"> -->
+                      <!-- </form> -->
                       <a href="index.php?switch={{event.id}}">{% if event.fav == 0 %}voeg toe aan favorieten{% else %}verwijder van favorieten{% endif %}</a>
                     </td>
                     <td>{% if event.price == 0.00 %}gratis{% else %}€ {{ event.price|number_format(2, ',', ' ') }}{% endif %}</td>
