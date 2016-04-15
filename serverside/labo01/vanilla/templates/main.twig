@@ -47,7 +47,7 @@
 {% for event in events %}
                   <tr>
                     <td>{{ event.start_date|date("j M Y - G\\ui")|lower }}</td>
-                    <td>{{ event.title }} ({{event.location}})<br/>
+                    <td>{{ event.title }} ({{event.location}}){% if event.fav == 1 %}<a href="index.php?switch={{event.id}}" class="icon fa-star"></a>{% endif %}<br/>
                       <!-- <form action="index.php" method="POST" style="margin:0;"> -->
                         <!-- <input type="submit" value="{% if event.fav == 0 %}voeg toe aan favorieten{% else %}verwijder van favorieten{% endif %}"> -->
                       <!-- </form> -->
