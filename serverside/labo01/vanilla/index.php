@@ -22,11 +22,11 @@ $switch = isset($_GET['switch']) ? $_GET['switch'] : '';
 
 if ($switch !== '') {
   $conn->executeUpdate('UPDATE concerts SET fav = (1 - fav) WHERE id = ?', array($switch));
+  header('Location: index.php');
 }
 
 if ($search !== '') {
   $concerts = $conn->fetchAll('SELECT * FROM concerts WHERE title LIKE ? ORDER BY start_date', array('%'.$search.'%'));
-
 } else {
   $concerts = $conn->fetchAll('SELECT * FROM concerts ORDER BY start_date');
 }
