@@ -1,0 +1,25 @@
+
+TWIG - for-else constructies
+{% for event in events %}
+...
+{% endfor %}
+...
+{% else %}
+						<p>Geen concerten gevonden.</p>
+{% endif %}
+
+TWIG - weergave concertdatum
+<td>{{ concert.start_date|date("j M Y - G\\ui")|lower }}</td>
+
+TWIG - weergave prijs
+{% if concert.price == 0.00 %}gratis{% else %}{{ concert.price|number_format(2, ',', ' ') }} &euro;{% endif %}
+
+
+
+SQL - VOORBEELDEN VAN QUERIES
+
+SELECT * FROM concerts ORDER BY start_date;
+
+SELECT * FROM concerts WHERE title LIKE '%party%' ORDER BY start_date;
+
+UPDATE concerts SET fav = (1 - fav) WHERE id = 1;
