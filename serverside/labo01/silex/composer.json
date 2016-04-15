@@ -1,0 +1,12 @@
+{
+    "name": "haroenv/silex",
+    "require": {
+        "silex/silex": "^1.3"
+    },
+    "authors": [
+        {
+            "name": "Haroen Viaene",
+            "email": "hello@haroen.me"
+        }
+    ]
+}
