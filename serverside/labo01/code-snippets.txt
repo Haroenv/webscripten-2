@@ -1,9 +1,9 @@
 
 TWIG - for-else constructies
+{% if events %}
 {% for event in events %}
 ...
 {% endfor %}
-...
 {% else %}
 						<p>Geen concerten gevonden.</p>
 {% endif %}
