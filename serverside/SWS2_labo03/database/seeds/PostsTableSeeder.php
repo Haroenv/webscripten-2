@@ -5,7 +5,7 @@ use Illuminate\Database\Seeder;
 class PostsTableSeeder extends Seeder
 {
     /**
-     * posts table seeder
+     * Run the database seeds.
      *
      * @return void
      */
