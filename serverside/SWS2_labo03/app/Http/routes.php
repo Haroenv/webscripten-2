@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-  return view('index');
-});
+Route::get('/', 'PostsController@showPosts');
 
-Route::get('/posts/{id}', function () {
-  return view('post');
-});
+Route::get('/posts/{id}', 'PostsController@showPost');
+
+Route::get('/posts/{id}/comments', 'PostsController@showComments');
+
+Route::get('authors/{id}', 'AuthorsController@showAuthor');
+
+Route::get('authors/{id}/posts', 'AuthorsController@showPosts');
