@@ -12,7 +12,7 @@ class CommentsTableSeeder extends Seeder
     public function run()
     {
         DB::table('comments')->insert([
-            'blogpost_id' => 1,
+            'post_id' => 1,
             'content' => '<p>Voluptatum repudiandae sequi iusto eum ut impedit et. Quam sit et voluptates quia inventore inventore. Illo quis totam molestiae ut.</p><p>Labore quibusdam quia modi facilis vel quia impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Anne Welch',
@@ -21,7 +21,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 1,
+            'post_id' => 1,
             'content' => '<p>Voluptatum repudiandae sequi iusto eum ut impedit et. Quam sit et voluptates quia inventore inventore. Illo quis totam molestiae ut.</p><p>Labore quibusdam quia modi facilis vel quia impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Shanny Howe',
@@ -30,7 +30,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 2,
+            'post_id' => 2,
             'content' => '<p>Voluptatum repudiandae sequi iusto eum ut impedit et. Quam sit et voluptates quia inventore inventore. Illo quis totam molestiae ut.</p><p>Labore quibusdam quia modi facilis vel quia impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Darrick Towne',
@@ -39,7 +39,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 3,
+            'post_id' => 3,
             'content' => '<p>Voluptatum repudiandae sequi iusto eum ut impedit et. Quam sit et voluptates quia inventore inventore. Illo quis totam molestiae ut.</p><p>Labore quibusdam quia modi facilis vel quia impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Paolo Ankunding',
@@ -48,7 +48,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 3,
+            'post_id' => 3,
             'content' => '<p>Voluptatum repudiandae sequi iusto eum ut impedit et. Quam sit et voluptates quia inventore inventore. Illo quis totam molestiae ut.</p><p>Labore quibusdam quia modi facilis vel quia impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Chelsie Gottlieb',
@@ -57,7 +57,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 5,
+            'post_id' => 5,
             'content' => '<p>Quod aspernatur sunt cum qui aut. Animi et explicabo ea.</p><p>Cupiditate id eum eum in ab. Id sint quidem nostrum. Similique labore doloribus eos at.</p><p>Officiis non rem ea quia ut. Quis quaerat itaque voluptatem a impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Alanna Moen',
@@ -66,7 +66,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 5,
+            'post_id' => 5,
             'content' => '<p>Voluptatum repudiandae sequi iusto eum ut impedit et. Quam sit et voluptates quia inventore inventore. Illo quis totam molestiae ut.</p><p>Labore quibusdam quia modi facilis vel quia impedit voluptas. Id molestias molestias sint enim possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Blanche Harris',
@@ -75,7 +75,7 @@ class CommentsTableSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
         DB::table('comments')->insert([
-            'blogpost_id' => 6,
+            'post_id' => 6,
             'content' => '<p>Quod aspernatur sunt cum qui aut. Animi et explicabo ea.</p><p>Cupiditate id eum eum in ab. Id sint quidem nostrum. Similique labore doloribus eos at.</p><p>Officiis non rem ea quia ut. Quis quaerat itaque voluptatem possimus autem.</p><p>Nemo et quam tempora. Similique aspernatur blanditiis sed adipisci quis eligendi. Id est minima excepturi et quae iste. Accusamus soluta iste vel soluta.</p><p>Itaque ut culpa nostrum nihil cupiditate illo beatae et. Modi dignissimos dolorum fugit sint.</p>',
             'date' => date("Y-m-d H:i:s",mt_rand(1262055681,1645619256)),
             'author' => 'Dr. Jaiden Legros',
