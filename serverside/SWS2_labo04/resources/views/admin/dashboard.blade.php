@@ -29,12 +29,12 @@
                 <td>{{ $blogpost->date }}</td>
                 <td>{{ $blogpost->numcomments }}</td>
                 <td>
-                    <a class="btn btn-primary" href="admin/edit/{{$blogpost->id}}">
+                    <a class="btn btn-primary" href="{{@url('/admin/edit/')}}/{{$blogpost->id}}">
                         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-danger" href="admin/delete/{{$blogpost->id}}">
+                    <a class="btn btn-danger" href="{{@url('/admin/delete/')}}/{{$blogpost->id}}">
                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
                     </a>
                 </td>
