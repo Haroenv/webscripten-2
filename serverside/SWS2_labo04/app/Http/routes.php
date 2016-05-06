@@ -76,3 +76,7 @@ Route::get('/authors/{id}', 'AuthorController@detail')->where('id', '[0-9]+');
  * all blogposts of one author
  */
 Route::get('/authors/{id}/blogposts', 'AuthorController@blogposts')->where('id', '[0-9]+');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

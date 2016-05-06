@@ -11,11 +11,15 @@ use Illuminate\Support\Facades\App;
 
 class AdminController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     public function dashboard() {
         $blogposts = Blogpost::orderBy('user_id', 'asc')->get();
 
-        return view('layouts.admin', [
-            'authors' => $blogposts
+        return view('admin.dashboard', [
+            'blogposts' => $blogposts
         ]);
     }
 }
