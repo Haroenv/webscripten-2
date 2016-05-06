@@ -8,6 +8,7 @@ use App\Comment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -16,7 +17,9 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
-        $blogposts = Blogpost::orderBy('id', 'asc')->get();
+        $blogposts = Blogpost::where('user_id','=',Auth::user()->user_id)
+        ->orderBy('id', 'asc')
+        ->get();
 
         return view('admin.dashboard', [
             'blogposts' => $blogposts
