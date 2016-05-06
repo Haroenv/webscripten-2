@@ -18,19 +18,14 @@
 
 Route::group(['as' => 'admin::'], function () {
     Route::get('admin/', ['as' => 'dashboard', 'uses' => 'AdminController@dashboard']);
+    Route::get('admin/add', ['as' => 'add', 'uses' => 'AdminController@add']);
+    Route::get('admin/delete/{id}', ['as' => 'delete', 'uses' => 'AdminController@delete']);
 });
 
 /**
  * add one
  */
 Route::post('/blog/add', function(request $request){
-
-});
-
-/**
- * delete one
- */
-Route::delete('/blog/delete{id}', function($id){
 
 });
 

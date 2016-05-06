@@ -16,10 +16,22 @@ class AdminController extends Controller
     }
 
     public function dashboard() {
-        $blogposts = Blogpost::orderBy('user_id', 'asc')->get();
+        $blogposts = Blogpost::orderBy('id', 'asc')->get();
 
         return view('admin.dashboard', [
             'blogposts' => $blogposts
         ]);
+    }
+
+    public function add() {
+      return view('admin.add', [
+      ]);
+    }
+
+    public function delete($id) {
+      $blogpost = Blogpost::orderBy('id', 'asc')->get();
+      return view('admin.delete', [
+        'post' => $blogpost
+      ]);
     }
 }

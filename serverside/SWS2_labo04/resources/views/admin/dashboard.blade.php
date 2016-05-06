@@ -7,6 +7,9 @@
 @endsection
 
 @section('content')
+    <a href="admin/add" class="btn btn-success pull-right">
+        <span class="glyphicon glyphicon-plus"></span> Add blogpost
+    </a>
     <table class="table">
         <thead>
             <tr>
@@ -18,10 +21,29 @@
                 <th></th>
             </tr>
         </thead>
+        <tbody>
+        @forelse($blogposts as $blogpost)
+            <tr>
+                <th scope="row">{{ $blogpost->id }}</th>
+                <td>{{ $blogpost->title }}</td>
+                <td>{{ $blogpost->date }}</td>
+                <td>{{ $blogpost->numcomments }}</td>
+                <td>
+                    <a class="btn btn-primary" href="admin/edit/{{$blogpost->id}}">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" href="admin/delete/{{$blogpost->id}}">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+                    </a>
+                </td>
+            </tr>
+            @empty
+                <tr><td>No blogposts to show!</td></tr>
+        @endforelse
+        </tbody>
+
     </table>
-    @forelse($blogposts as $blogpost)
-        <li><a href="{{ @url('/blogposts') }}/{{ $blogpost->id }}">{{ $blogpost->title }}</a></li>
-        @empty
-            <p>No blogposts to show!</p>
-    @endforelse
+
 @endsection
