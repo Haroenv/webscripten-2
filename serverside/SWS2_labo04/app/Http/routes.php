@@ -16,8 +16,8 @@
  * admin
  */
 
-Route::get('/blog/admin', function(){
-
+Route::group(['as' => 'admin::'], function () {
+    Route::get('admin/', ['as' => 'dashboard', 'uses' => 'AdminController@dashboard']);
 });
 
 /**
