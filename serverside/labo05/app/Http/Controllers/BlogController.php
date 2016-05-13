@@ -57,6 +57,7 @@ class BlogController extends Controller
         // foreach ($all as $category => $value) {
         //     $categories[$value->category_id] = $value->name;
         // }
+        $request->flash();
         $categories = Category::lists('name', 'category_id');
         $results = Blogpost::orderBy('date', 'asc')
             ->join('users','blogposts.user_id', '=', 'users.user_id')

@@ -22,8 +22,16 @@
             {!! Form::text('title', $blogpost->title, array('class' => 'form-control')) !!}
         </div>
         <div class="form-group">
+            {!! Form::label('category', 'Category:') !!}
+            {!! Form::select('category', $categories, $blogpost->category_id, ['placeholder' => 'Pick a category...']) !!}
+        </div>
+        <div class="form-group">
             {!! Form::label('blog_content', 'Content:') !!}
             {!! Form::textarea('blog_content', $blogpost->content, array('class' => 'form-control', 'rows' => '10')) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('image', 'Image:') !!}
+            {!! Form::file('image') !!}
         </div>
         {!! csrf_field() !!}
         <a href="{{ @url('/admin') }}">Cancel</a>

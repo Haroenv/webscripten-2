@@ -12,6 +12,7 @@
         <tr>
             <th>#</th>
             <th>Title</th>
+            <th>Category</th>
             <th>Added on</th>
             <th class="text-center">Comments</th>
             <th></th>
@@ -24,6 +25,7 @@
                 <tr>
                     <td>{{ $blogpost->id }}</td>
                     <td><a href="{{ @url('/blogposts') .'/'.$blogpost->id }}">{{ $blogpost->title }}</a></td>
+                    <td>{{$categories[$blogpost->category_id]}}</td>
                     <td>{{ date('d F, Y', strtotime($blogpost->date)) }}</td>
                     <td class="text-center">{{ $blogpost->numcomments }}</td>
                     <td class="text-right">
