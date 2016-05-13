@@ -61,16 +61,16 @@ class BlogController extends Controller
         $results = Blogpost::orderBy('date', 'asc')
             ->join('users','blogposts.user_id', '=', 'users.user_id')
             ->join('categories','blogposts.category_id','=','categories.category_id');
-        if (isset($results->q)) {
+        if ($request->q) {
             $results = $results->where('title', 'like', '%'.$request->q.'%');
         }
-        if (isset($results->from)) {
-            $results = $results->where('',$request->from);
+        if ($request->from) {
+            $results = $results->where('date', '>', $request->from);
         }
-        if (isset($results->to)) {
-            $results = $results->where('',$request->to);
+        if ($request->to) {
+            $results = $results->where('date', '<', $request->to);
         }
-        if (isset($results->category)) {
+        if ($request->category) {
             $results = $results->where('categories.category_id','=',$request->category);
         }
         $results = $results->get();
