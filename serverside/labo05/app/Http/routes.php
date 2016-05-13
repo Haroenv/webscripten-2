@@ -33,6 +33,11 @@ Route::get('/blogposts/{id}', 'BlogController@detail')->where('id', '[0-9]+');
 Route::get('/blogposts/{id}/comments', 'BlogController@comments')->where('id', '[0-9]+');
 
 /**
+ * search for the thingies
+ */
+Route::get('/search','BlogController@search');
+
+/**
  * all authors
  */
 

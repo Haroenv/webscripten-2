@@ -28,8 +28,8 @@
         <nav>
             <ul>
                 <li><a href="{{ @url('/') }}"> &#127968; Home</a></li>
-                <li><a href="{{ @url('/authors') }}"> &#128366; Authors</a></li>
-                <li><a href="{{ @url('/blogposts/search') }}"> &#128269; Search</a></li>
+                <li><a href="{{ @url('/authors') }}"> ﷲ Authors</a></li>
+                <li><a href="{{ @url('/search') }}"> &#128269; Search</a></li>
                 <li><a href="{{ @url('/admin') }}"> &#9773; Admin</a></li>
             </ul>
         </nav>

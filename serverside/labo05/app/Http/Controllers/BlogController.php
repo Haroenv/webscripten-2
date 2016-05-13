@@ -48,4 +48,9 @@ class BlogController extends Controller
             'comments' => $comments
         ]);
     }
+
+    public function search()
+    {
+        return view('blog.search');
+    }
 }
