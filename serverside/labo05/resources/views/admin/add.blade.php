@@ -16,7 +16,7 @@
         @include('common.errors')
 
         <!-- New Blogpost form -->
-        {!! Form::open(array('url' => 'admin/add', 'method' => 'POST')) !!}
+        {!! Form::open(array('url' => 'admin/add', 'method' => 'POST', 'files'=>true)) !!}
 
         <div class="form-group">
             {!! Form::label('title', 'Title:') !!}
@@ -32,7 +32,7 @@
         </div>
         <div class="form-group">
             {!! Form::label('image', 'Image:') !!}
-            {!! Form::file('image') !!}
+            {!! Form::file('images[]', array('multiple'=>true)) !!}
         </div>
         {!! csrf_field() !!}
         <a href="{{ @url('/admin') }}">Cancel</a>
