@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\Blogpost;
 use App\Comment;
+use App\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -49,8 +50,33 @@ class BlogController extends Controller
         ]);
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        return view('blog.search');
+        // $all = Category::all();
+        // $categories = array();
+        // foreach ($all as $category => $value) {
+        //     $categories[$value->category_id] = $value->name;
+        // }
+        $categories = Category::lists('name', 'category_id');
+        $results = Blogpost::orderBy('date', 'asc')
+            ->join('users','blogposts.user_id', '=', 'users.user_id')
+            ->join('categories','blogposts.category_id','=','categories.category_id');
+        if (isset($results->q)) {
+            $results = $results->where('title', 'like', '%'.$request->q.'%');
+        }
+        if (isset($results->from)) {
+            $results = $results->where('',$request->from);
+        }
+        if (isset($results->to)) {
+            $results = $results->where('',$request->to);
+        }
+        if (isset($results->category)) {
+            $results = $results->where('categories.category_id','=',$request->category);
+        }
+        $results = $results->get();
+        return view('blog.search', [
+            'categories' => $categories,
+            'blogposts' => $results,
+        ]);
     }
 }

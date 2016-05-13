@@ -40,12 +40,11 @@ Route::get('/search','BlogController@search');
 /**
  * all authors
  */
-
 Route::get('/authors', 'AuthorController@overview');
-/**
- * one authors
- */
 
+/**
+ * one author
+ */
 Route::get('/authors/{id}', 'AuthorController@detail')->where('id', '[0-9]+');
 
 /**
